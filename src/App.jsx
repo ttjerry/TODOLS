@@ -52,7 +52,7 @@ function App() {
   }
 
   return (
-    <div className="flex flex-col justify-center items-center">
+    <div className="flex flex-col md:flex-col justify-center items-center">
       <Todo task={task} setTask={setTask} addTask={addTask} />
       <List list={list} ontoggle={toggleActive} deleteItem={deleteItem} />
     </div>
@@ -62,7 +62,7 @@ function App() {
 // Input field and add button
 function Todo({ task, setTask, addTask }) {
   return (
-    <div className="flex md:flex-col gap-10 mt-[5%]">
+    <div className="flex flex-col md:flex-col gap-10 mt-[5%]">
       <h2 className="text-center text-white font-bold text-3xl">TODOLS</h2>
       <form onSubmit={addTask} className="flex justify-center w-screen">
         <input
@@ -82,7 +82,7 @@ function Todo({ task, setTask, addTask }) {
 // List of tasks
 function List({ list, ontoggle, deleteItem }) {
   return (
-    <div className="relative lg:w-[55%] w-[57%] h-min self-center">
+    <div className="relative lg:w-[55%] md:w-[57%] w-[65%] h-min self-center">
       {list.map((item) => (
         <ListItem
           key={item.id}
